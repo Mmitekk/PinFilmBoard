@@ -446,10 +446,16 @@
       return;
     }
     if (img.id === 'film-poster') {
+      // не затираем innerHTML — img нужен для следующих открытий
       var w = $('#film-poster-wrap');
       if (w) {
         w.classList.add('ph');
-        w.innerHTML = '<div class="ph-glyph">🎬</div>';
+        img.hidden = true;
+        img.removeAttribute('src');
+        var g = document.createElement('div');
+        g.className = 'ph-glyph';
+        g.textContent = '🎬';
+        w.appendChild(g);
       }
       return;
     }
@@ -860,6 +866,10 @@
     var wrap = $('#film-poster-wrap');
     var img = $('#film-poster');
     wrap.classList.remove('ph');
+    // старую заглушку убираем точечно — innerHTML бы уничтожил сам <img>,
+    // и следующее открытие модалки падало (карточки переставали открываться)
+    var oldGlyph = wrap.querySelector('.ph-glyph');
+    if (oldGlyph) oldGlyph.remove();
     if (t.poster) {
       img.hidden = false;
       img.src = t.poster;
@@ -868,7 +878,10 @@
       img.hidden = true;
       img.removeAttribute('src');
       wrap.classList.add('ph');
-      wrap.innerHTML = '<div class="ph-glyph">🎬</div>';
+      var glyph = document.createElement('div');
+      glyph.className = 'ph-glyph';
+      glyph.textContent = '🎬';
+      wrap.appendChild(glyph);
     }
 
     $('#film-prev').hidden = state.filmList.length < 2;
