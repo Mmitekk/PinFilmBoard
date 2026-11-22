@@ -1,6 +1,6 @@
 window.__PFB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T15:55:58.191Z",
+  "updatedAt": "2026-11-22T16:08:03.185Z",
   "boards": [
     {
       "id": "b-films",
@@ -24,21 +24,6 @@ window.__PFB_DATA = {
         }
       ],
       "tiles": [
-        {
-          "id": "t-pine1_AfqPShwdGnIiKU06NVoz2LjCeqLXRs0t-VmEP0Ru9qLQzAtInq_b",
-          "columnId": "c-want",
-          "url": "https://wink.ru/series/fisher-year-2023",
-          "provider": "other",
-          "title": "Отель Элеон",
-          "poster": null,
-          "description": "«Оте́ль Элео́н» — российский комедийный телесериал, спин-офф российского ситкома «Кухня». Производством телесериала занимались компании Yellow, Black and White, Sister’s Production и Keystone Production. Телесериал повествует о комических и драматических ситуациях внутри коллектива пятизвёздочного бутик-отеля Eleon и ресторана Victor.",
-          "year": 0,
-          "tags": [
-            "pinterest"
-          ],
-          "note": "",
-          "addedAt": "2025-08-13T18:24:05.000Z"
-        },
         {
           "id": "t-pine1_AfqPShwcG4yt0SBJCTBMguu_7MQDeiPhmeqE1mfE6Idk0XFQEC_J",
           "columnId": "c-want",
