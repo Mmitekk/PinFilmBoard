@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PinFilmBoard — доска фильмов для GitHub Pages</title>
+<style>
+:root{
+  --bg:#f4f5f8; --panel:#ffffff; --ink:#111827; --muted:#6b7280; --line:#e4e7ec;
+  --accent:#4f46e5; --accent-soft:#eef2ff; --code-bg:#0f172a; --code-ink:#e2e8f0;
+  --ok:#047857; --shadow:0 1px 2px rgba(16,24,40,.06),0 8px 24px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0b1020; --panel:#141b2d; --ink:#e7eaf0; --muted:#98a2b3; --line:#263149;
+    --accent:#8b8cf7; --accent-soft:#1b2340; --code-bg:#070b16; --code-ink:#d8dee9;
+    --ok:#34d399; --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35); }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 20px 72px}
+header.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:22px 24px;box-shadow:var(--shadow);margin-bottom:18px}
+header.card h1{margin:0 0 4px;font-size:24px;letter-spacing:-.01em}
+header.card .sub{color:var(--muted);font-size:13px;word-break:break-all}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{background:var(--accent-soft);color:var(--ink);border:1px solid var(--line);
+  border-radius:999px;padding:3px 11px;font-size:12.5px}
+.chip b{font-weight:600;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:22px;align-items:start}
+.toc{position:sticky;top:18px;background:var(--panel);border:1px solid var(--line);
+  border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
+.toc-t{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.toc ol{margin:0;padding-left:18px}
+.toc li{margin:4px 0;font-size:13px;line-height:1.45}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent}
+.toc a:hover{border-bottom-color:var(--accent);color:var(--accent)}
+.toc li.toc-sec{margin:6px 0 6px 0;padding-bottom:4px;border-bottom:1px solid var(--line)}
+.toc li.toc-sec a{font-weight:600}
+.state{background:var(--accent-soft);border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:12px;padding:14px 18px;margin-bottom:18px}
+.state h2{margin:0 0 6px;font-size:15px}
+.state p{margin:0 0 4px}
+.state p:last-child{margin-bottom:0}
+.state strong{color:var(--accent)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:18px 22px;margin-bottom:16px;box-shadow:var(--shadow);scroll-margin-top:16px}
+.card h2{margin:0 0 8px;font-size:16px}
+.card h3{margin:14px 0 6px;font-size:13px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}
+.card p,.card li{margin:6px 0}
+.card table td:nth-child(2){white-space:nowrap}
+.task{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:18px 22px 8px;margin-bottom:16px;box-shadow:var(--shadow);scroll-margin-top:16px}
+.task-h{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.task-n{flex:0 0 auto;min-width:26px;height:26px;border-radius:8px;background:var(--accent);color:#fff;
+  display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+.task-h h2{margin:0;font-size:18px;letter-spacing:-.01em}
+.task-b h3{margin:18px 0 6px;font-size:14px;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}
+.task-b p,.task-b li{margin:6px 0}
+ul.lst,ol.lst{margin:6px 0;padding-left:22px}
+ul.lst ul,ol.lst ul,ul.lst ol,ol.lst ol{margin:4px 0}
+.check{color:var(--muted)}
+.check.on{color:var(--ok)}
+code{background:var(--accent-soft);border:1px solid var(--line);border-radius:6px;
+  padding:1px 5px;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre{background:var(--code-bg);color:var(--code-ink);border-radius:10px;padding:13px 15px;
+  overflow:auto;font:13px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre code{background:none;border:0;padding:0;color:inherit}
+a{color:var(--accent)}
+hr{border:0;border-top:1px solid var(--line);margin:18px 0}
+blockquote{margin:10px 0;padding:4px 16px;border-left:3px solid var(--line);color:var(--muted)}
+.tw{overflow:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left}
+th{background:var(--accent-soft)}
+footer{margin-top:22px;color:var(--muted);font-size:12px;text-align:center}
+@media (max-width:880px){ .layout{grid-template-columns:1fr} .toc{position:static;order:-1} }
+@media print{ body{background:#fff} .toc{display:none} .layout{grid-template-columns:1fr} .task{break-inside:avoid;box-shadow:none} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="card">
+    <h1>PinFilmBoard — доска фильмов для GitHub Pages</h1>
+    <div class="sub">D:\GitHub\PinFilmBoard\.work-report\REPORT.md</div>
+    <div class="chips"><span class="chip"><b>Область:</b> PinFilmBoard</span><span class="chip"><b>Статус:</b> wip — сервис готов и закоммичен (35 фильмов), ждёт push пользователя</span><span class="chip"><b>Обновлено:</b> 2026-11-22 17:57</span></div>
+  </header>
+  <div class="layout">
+    <main>
+      <section class="state" id="sec-state"><h2 id="текущее-состояние">Текущее состояние</h2><p><strong>Где остановились:</strong> Сервис PinFilmBoard полностью написан, протестирован в браузере, импорт из Pinterest выполнен (35 фильмов в доске «Фильмы», колонка «Хочу посмотреть»). Коммиты <code>cd676fb</code> (данные) и <code>67d37e4</code> (сервис) на <code>main</code>, не запушены. Remote не привязан, Pages не включён — публикация за пользователем.</p><p><strong>Что проверено:</strong> <code>node tools/test-movies.mjs</code> — 13/13; живой резолвер: imdb tt0111161 → «Побег из Шоушенка» (RU описание+постер), okko/movie/interstellar → «Интерстеллар» (2014, постер), kinopoisk → честный «введите название» → кнопка «Википедия» → заполнение; импорт Pinterest 36/36 пинов (35 фильмов + 1 дубль названия отфильтрован); браузер: сетка 35 карточек (24 постера, 23 загружено), модалка фильма (постер/название/год/описание/источник), канбан-перенос через меню, dev-save переживает перезагрузку, мобильный вьюпорт 390px, консоль без ошибок.</p><p><strong>Следующий шаг:</strong> пользователь: <code>git remote add origin https://github.com/Mmitekk/PinFilmBoard.git &amp;&amp; git push -u origin main</code>, включить Pages (main/root), на сайте «Войти» (fine-grained токен: Contents Read and write на PinFilmBoard) — и редактировать с сайта. Новые пины: <code>node tools/import-pinterest.mjs --commit</code>.</p><p><strong>Не повторять:</strong> WDQS/Викимедиа без осмысленного User-Agent → 403 (в movies.js UA ставится всегда; в браузере заголовок запрещён и игнорируется — там работает родной UA); <code>field_set_key</code> в Pinterest feed-ресурсах даёт пустой data; BoardSectionPinsResource требует <code>section_id</code>; BoardResource — <code>{slug, username}</code>; node fetch к внешним сайтам без <code>dns.setDefaultResultOrder('ipv4first')</code> падает в ConnectTimeout; миниатюры Википедии не апгрейдить до другой ширины (404 у части исходников) — использовать как есть + срезать <code>?utm…</code>; в data/db.js присваивание искать регэкспом <code>^window\.__PFB_DATA\s*=</code> (в шапке комментарий с таким же текстом); версиональные бампы <code>?v=N</code> при правках css/js.</p></section>
+      <section class="card" id="sec-stages"><h2 id="этапы">Этапы</h2><div class="tw"><table><thead><tr><th>Этап</th><th>Статус</th><th>Итог</th></tr></thead><tbody><tr><td>—</td><td>—</td><td>—</td></tr></tbody></table></div></section>
+      <section class="card" id="sec-howto"><h2 id="как-продолжить">Как продолжить</h2><p><strong>Окружение:</strong> Node 24 (только встроенные модули для tools/*), любой современный браузер. Зависимостей нет, сборки нет — vanilla JS (ES5-стиль IIFE, как PinVideoBoard/PinRefBoard).</p><p><strong>Команды:</strong> <code>node tools/dev-server.mjs</code> → http://127.0.0.1:8941/ (статика + POST /api/dev-save пишет data/db.js без токена; только localhost при DEV_MODE); <code>node tools/test-movies.mjs</code> — тесты парсера ссылок; <code>node tools/import-pinterest.mjs [--dry|--commit] [--board &lt;slug&gt;]</code> — импорт из Pinterest-доски.</p><p><strong>Точки входа:</strong> <code>index.html</code> → <code>js/app.js</code> (приложение) → <code>js/movies.js</code> (парсеры ссылок + резолверы Wikidata SPARQL / Wikipedia REST — единый модуль для браузера и node через window-шим), <code>js/api.js</code> (GitHub Contents API: токен, sha-guard), <code>data/db.js</code> (данные — глобал <code>window.__PFB_DATA</code>, коммитится сайтом).</p><p>done: План и разведка — пробы: Кинопоиск 302 SSO-стена, Wikidata P345 надёжен / P1713 нерегулярен, Wikipedia REST с CORS, Pinterest 39 пинов done: Реализация — 10 файлов: index, css, config, movies, api, app, data, dev-server(8941), test-movies, import-pinterest, README done: Тестирование — парсер 13/13, живые резолверы, браузерный прогон, мобильный вид done: Импорт предзаполнения — 35 фильмов из «фильмы-для-просмотра» в колонку «Хочу посмотреть» todo: Публикация — push пользователем, Pages (main/root), вход токеном на живом сайте</p><h2 id="задача-1-сервис-pinfilmboard-доска-фильмов-с-метаданными-из-wikidata-википедии-2">Задача 1 — Сервис PinFilmBoard: доска фильмов с метаданными из Wikidata/Википедии — 2026-11-22</h2><p><strong>Агент:</strong> ZCode (GLM)</p><h3 id="запрос-пользователя">Запрос пользователя</h3><blockquote><p>Теперь давай создадим сервис похожий на https://mmitekk.github.io/PinVideoBoard/. С дизайном как у https://mmitekk.github.io/PinVideoBoard/ или https://mmitekk.github.io/PinRefBoard/. Тоже будет личный кабинет входа по токену... Но добавляь будем не видео, а карточки с изображениями, как на https://mmitekk.github.io/PinRefBoard/. Это доска исключительно для фильмов. Список просмотра в который я время от времени буду заглядывать и добавлять/удалять что-то новое. В модальном окне открываем и видим фильм его обложку, название, описание. Желательно парсить название и описание со страницы фильма ссылку на который я вставляю. Если не удается с парсить, то можно взять из википедии или вовсе оставить пустым. Т.е. вставляю ссылку, заполняется название фильма, фотка и описание. Основные сайты с которых буду брать ссылки: Киновопоиск (но он вроде запрещает парсить), а также IMDB, Okko и прочие известные кинотеатры. Для предзаполнения возьми https://ru.pinterest.com/mmitekk/фильмы-для-просмотра/. Та муже есть ссылки. Если спарисить не удасться, найди альтернативные ссылки и добавь. Репо будет тут: D:\GitHub\PinFilmBoard</p></blockquote><h3 id="что-сделано">Что сделано</h3><ul class="lst"><li>Разведка (пробоинг через Explore-агента + WebFetch): Кинопоиск отдаёт 302 на SSO (парсинг закрыт), Wikidata P345 (IMDb) — надёжный маппинг, P1713 (Kinopoisk) — нерегулярный, Wikipedia REST summary отдаёт название/описание/постер с CORS, Pinterest-доска публична (39 пинов).</li><li>Написан сервис (форк архитектуры PinVideoBoard): <code>index.html</code>, <code>css/style.css</code> (монохром + «Показать цвет», постеры grayscale по умолчанию), <code>js/config.js</code>, <code>js/movies.js</code> (парсеры kinopoisk/imdb/okko/wikipedia + резолверы: Wikidata SPARQL P345/P1713 → ru-сущность → ru.wikipedia REST summary; okko — slug → wiki-поиск; «Найти в Википедии» по названию; UA-заголовок для Викимедиа), <code>js/api.js</code> (Contents API, sha-guard), <code>js/app.js</code> (сетка/канбан/DnD/фильтры/модалки/auth), <code>data/db.js</code> (доска «Фильмы»: Хочу посмотреть/Смотрю/Просмотрено), <code>tools/dev-server.mjs</code> (порт 8941), <code>tools/test-movies.mjs</code> (13 кейсов), <code>tools/import-pinterest.mjs</code>, <code>README.md</code>.</li><li>Импорт Pinterest: 36 пинов → 35 фильмов (1 дубль названия отфильтрован); обогащение: 4 через Википедию по названию пина, остальные — resolve по ссылкам (IMDb через Wikidata c ретраем при лимите WDQS, Okko через wiki-поиск); чистка названий пинов (мусор «⭐ 7.9 | Drama», «Смотреть онлайн…», «— на Иви!»); imdb-скриншоты не используются как обложки; постеры из Википедии (исходная миниатюра 330px) и пиновских картинок.</li><li>Проверено в браузере (dev-сервер 8941): сетка 35 карточек (24 постера), модалка фильма (обложка в цвете + название + год + описание + «Открыть источник»), kinopoisk-флоу → «Википедия» → карточка «Побег из Шоушенка» сохранена и перенесена в канбане, dev-save переживает перезагрузку, мобильный вид, консоль чистая.</li><li>Тестовая карточка Шоушенка после проверки удалена (db.js возвращён к импортированному состоянию, 35 фильмов).</li><li>Коммиты: <code>cd676fb</code> (данные импорта), <code>67d37e4</code> (сервис). Push/remote — за пользователем.</li></ul><h3 id="изменённые-файлы">Изменённые файлы</h3><ul class="lst"><li><code>index.html</code>, <code>css/style.css</code>, <code>js/config.js</code>, <code>js/movies.js</code>, <code>js/api.js</code>, <code>js/app.js</code>, <code>data/db.js</code>, <code>tools/dev-server.mjs</code>, <code>tools/test-movies.mjs</code>, <code>tools/import-pinterest.mjs</code>, <code>README.md</code> — новые</li></ul><h3 id="как-проверить">Как проверить</h3><ul class="lst"><li><code>node tools/test-movies.mjs</code> — 13/13</li><li><code>node tools/dev-server.mjs</code> → http://127.0.0.1:8941/ — сетка 35 фильмов; «Добавить фильм» → kinopoisk-ссылка → «Определить» → честный статус → название → «Википедия» → Сохранить; модалка; канбан-DnD</li><li><code>node tools/import-pinterest.mjs --dry</code> — все пины «уже есть» (дедуп)</li></ul><h3 id="решения-и-допущения">Решения и допущения</h3><ul class="lst"><li>Кинопоиск не парсится (SSO-стена подтверждена пробами) — маппинг через Wikidata P1713 как попытка + ручной путь «название → Википедия»; это единственный честный вариант для статического сайта.</li><li>IMDb — через Wikidata P345 (проверено: уникальный результат, ru-описание, sitelink → REST summary с постером).</li><li>Постеры — исходные миниатюры Википедии (330px): попытка апгрейда до 480px дала 404 у части файлов — откатил и починил уже сохранённые URL.</li><li>Описания длинные хранятся целиком; в карточке — clamp 2 строки, в модалке — целиком.</li><li>Секция «смотреть-позже» и др. PinVideoBoard-задачи не переносились: PinFilmBoard — отдельный сервис, единая доска «Фильмы».</li></ul><h3 id="открытые-вопросы-и-риски">Открытые вопросы и риски</h3><ul class="lst"><li>Часть карточек с латинскими названиями без описания (пины-скриншоты IMDb, у которых resolve не удался в момент импорта) — лечится кнопкой «Википедия» в редакторе.</li><li>Неофициальный Pinterest API и SPARQL WDQS — лимиты возможны; в инструменте ретраи.</li><li>WDQS CORS в браузере: Wikidata документирует ACAO, но в живом браузере не проверено (node-проверки прошли); при проблеме — цепочка всё равно работает через поиск Википедии.</li></ul><h3 id="ответ-пользователю">Ответ пользователю</h3><blockquote><p>PinFilmBoard готов и закоммичен локально (2 коммита, 35 фильмов уже на доске «Фильмы» из вашей Pinterest-доски). Как работает парсинг: IMDb — tt-код ищется в Wikidata → русское название/описание → обложка из Википедии; Okko — слаг ссылки ищется в Википедии; Кинопоиск действительно закрыт от ботов (302 на Яндекс SSO проверил) — поэтому он пробует маппинг через Wikidata, а если не выходит, честно просит ввести название: одна кнопка «Википедия» — и описание, обложка и год подтягиваются сами; ссылку Кинопоиска карточка сохраняет как источник. В сетке — монохромные постеры как на Pinterest, в модалке — обложка в цвете + название + год + описание + ссылка на источник, ←/→ перелистывают отфильтрованные. Канбан с цветными колонками и drag &amp; drop — на месте. Всё проверено в браузере, тесты парсера 13/13. Осталось за вами: git remote add origin https://github.com/Mmitekk/PinFilmBoard.git &amp;&amp; git push -u origin main, включить Pages (main/root) и на сайте «Войти» с токеном (Contents: Read and write на PinFilmBoard). Локальный просмотр: node tools/dev-server.mjs → http://127.0.0.1:8941/ (сервер сейчас запущен, там уже вся доска). Новые пины: node tools/import-pinterest.mjs --commit.</p></blockquote></section>
+      
+    </main>
+    <nav class="toc"><div class="toc-t">Содержание</div><ol><li class="toc-sec"><a href="#sec-state">Текущее состояние</a></li><li class="toc-sec"><a href="#sec-stages">Этапы</a></li><li class="toc-sec"><a href="#sec-howto">Как продолжить</a></li></ol></nav>
+  </div>
+  <footer>Сгенерировано из D:\GitHub\PinFilmBoard\.work-report\REPORT.md · 2026-11-22 17:57</footer>
+</div>
+</body>
+</html>
