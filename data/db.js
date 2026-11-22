@@ -1,6 +1,6 @@
 window.__PFB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T15:02:34.631Z",
+  "updatedAt": "2026-11-22T15:06:07.152Z",
   "boards": [
     {
       "id": "b-films",
@@ -30,7 +30,7 @@ window.__PFB_DATA = {
           "url": "https://wink.ru/series/fisher-year-2023",
           "provider": "other",
           "title": "Отель Элеон",
-          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/0/0c/%D0%A1%D0%B5%D1%80%D0%B8%D0%B0%D0%BB_%D0%9E%D1%82%D0%B5%D0%BB%D1%8C_%D0%AD%D0%BB%D0%B5%D0%BE%D0%BD.jpg/480px-%D0%A1%D0%B5%D1%80%D0%B8%D0%B0%D0%BB_%D0%9E%D1%82%D0%B5%D0%BB%D1%8C_%D0%AD%D0%BB%D0%B5%D0%BE%D0%BD.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "poster": null,
           "description": "«Оте́ль Элео́н» — российский комедийный телесериал, спин-офф российского ситкома «Кухня». Производством телесериала занимались компании Yellow, Black and White, Sister’s Production и Keystone Production. Телесериал повествует о комических и драматических ситуациях внутри коллектива пятизвёздочного бутик-отеля Eleon и ресторана Victor.",
           "year": 0,
           "tags": [
@@ -90,7 +90,7 @@ window.__PFB_DATA = {
           "url": "https://www.imdb.com/title/tt6773088/",
           "provider": "imdb",
           "title": "Братья (телесериал, 2026)",
-          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/b/b7/%D0%91%D1%80%D0%B0%D1%82%D1%8C%D1%8F_%28%D1%81%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%2C_2026%29.jpg/480px-%D0%91%D1%80%D0%B0%D1%82%D1%8C%D1%8F_%28%D1%81%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%2C_2026%29.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/b/b7/%D0%91%D1%80%D0%B0%D1%82%D1%8C%D1%8F_%28%D1%81%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%2C_2026%29.jpg/330px-%D0%91%D1%80%D0%B0%D1%82%D1%8C%D1%8F_%28%D1%81%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%2C_2026%29.jpg",
           "description": "«Бра́тья» — американская телевизионная комедия c Мэттью Макконахи и Вуди Харрельсоном в главных ролях. Премьера состоялась на стриминговой платформе Apple TV 23 сентября 2026 года.",
           "year": 2026,
           "tags": [
@@ -105,7 +105,7 @@ window.__PFB_DATA = {
           "url": "https://okko.tv/movie/the-straight-story",
           "provider": "okko",
           "title": "Простая история (фильм, 1999)",
-          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/0/07/%D0%9F%D1%80%D0%BE%D1%81%D1%82%D0%B0%D1%8F_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%28%D0%BF%D0%BE%D1%81%D1%82%D0%B5%D1%80_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0_1999_%D0%B3%D0%BE%D0%B4%D0%B0%29.jpg/480px-%D0%9F%D1%80%D0%BE%D1%81%D1%82%D0%B0%D1%8F_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%28%D0%BF%D0%BE%D1%81%D1%82%D0%B5%D1%80_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0_1999_%D0%B3%D0%BE%D0%B4%D0%B0%29.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/0/07/%D0%9F%D1%80%D0%BE%D1%81%D1%82%D0%B0%D1%8F_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%28%D0%BF%D0%BE%D1%81%D1%82%D0%B5%D1%80_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0_1999_%D0%B3%D0%BE%D0%B4%D0%B0%29.jpg/330px-%D0%9F%D1%80%D0%BE%D1%81%D1%82%D0%B0%D1%8F_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%28%D0%BF%D0%BE%D1%81%D1%82%D0%B5%D1%80_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0_1999_%D0%B3%D0%BE%D0%B4%D0%B0%29.jpg",
           "description": "«Простая история» — восьмой полнометражный художественный фильм американского кинорежиссёра Дэвида Линча. Премьера состоялась 21 мая 1999 года на Каннском кинофестивале. Название фильма представляет собой игру слов: слово «straight» с английского переводится как «прямой, простой», а также является фамилией главного героя. Таким образом, название можно перевести и как «История Стрейта».",
           "year": 1999,
           "tags": [
@@ -120,7 +120,7 @@ window.__PFB_DATA = {
           "url": "https://www.film.ru/movies/klara-i-solnce",
           "provider": "other",
           "title": "Румянова, Клара Михайловна",
-          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/5/56/%D0%9A%D0%BB%D0%B0%D1%80%D0%B0_%D0%A0%D1%83%D0%BC%D1%8F%D0%BD%D0%BE%D0%B2%D0%B0.jpg/480px-%D0%9A%D0%BB%D0%B0%D1%80%D0%B0_%D0%A0%D1%83%D0%BC%D1%8F%D0%BD%D0%BE%D0%B2%D0%B0.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/5/56/%D0%9A%D0%BB%D0%B0%D1%80%D0%B0_%D0%A0%D1%83%D0%BC%D1%8F%D0%BD%D0%BE%D0%B2%D0%B0.jpg/330px-%D0%9A%D0%BB%D0%B0%D1%80%D0%B0_%D0%A0%D1%83%D0%BC%D1%8F%D0%BD%D0%BE%D0%B2%D0%B0.jpg",
           "description": "Кла́ра Миха́йловна Румя́нова — советская и российская актриса; заслуженная артистка РСФСР (1979). Известна тем, что обладала узнаваемым характерным высоким голосом и работала в озвучивании персонажей более трёхсот советских мультфильмов.",
           "year": 1979,
           "tags": [
@@ -135,7 +135,7 @@ window.__PFB_DATA = {
           "url": "https://www.imdb.com/title/tt7984766/",
           "provider": "imdb",
           "title": "Король Англии (фильм)",
-          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/a/af/The_King_poster.jpg/480px-The_King_poster.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/a/af/The_King_poster.jpg/330px-The_King_poster.jpg",
           "description": "«Король Англии» — исторический фильм австралийского режиссёра Дэвида Мишо по сценарию Мишо и Джоэла Эдгертона, по мотивам нескольких хроник Уильяма Шекспира из цикла «Генриад».",
           "year": 0,
           "tags": [
@@ -270,7 +270,7 @@ window.__PFB_DATA = {
           "url": "https://www.imdb.com/title/tt31806037",
           "provider": "imdb",
           "title": "Переходный возраст (сериал, 2025)",
-          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/b/b1/%D0%9F%D0%B5%D1%80%D0%B5%D1%85%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D0%B2%D0%BE%D0%B7%D1%80%D0%B0%D1%81%D1%82_%282025%29.jpg/480px-%D0%9F%D0%B5%D1%80%D0%B5%D1%85%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D0%B2%D0%BE%D0%B7%D1%80%D0%B0%D1%81%D1%82_%282025%29.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/b/b1/%D0%9F%D0%B5%D1%80%D0%B5%D1%85%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D0%B2%D0%BE%D0%B7%D1%80%D0%B0%D1%81%D1%82_%282025%29.jpg/330px-%D0%9F%D0%B5%D1%80%D0%B5%D1%85%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D0%B2%D0%BE%D0%B7%D1%80%D0%B0%D1%81%D1%82_%282025%29.jpg",
           "description": "«Перехо́дный во́зраст» — британский мини-сериал производства Netflix, вышедший в 2025 году. Создатели сериала Джек Торн, Филипп Барантини и Стивен Грэм, который сыграл одну из главных ролей. Сериал состоит из 4 эпизодов, каждый из которых снят одним непрерывным кадром. Премьера состоялась 13 марта 2025.",
           "year": 2025,
           "tags": [
@@ -285,7 +285,7 @@ window.__PFB_DATA = {
           "url": "https://www.imdb.com/title/tt0096540/",
           "provider": "imdb",
           "title": "Бангкок Хилтон",
-          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/d/de/Bangkok_Hilton_1989.jpg/480px-Bangkok_Hilton_1989.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/d/de/Bangkok_Hilton_1989.jpg/330px-Bangkok_Hilton_1989.jpg",
           "description": "«Бангко́к Хи́лтон» — австралийский остросюжетный драматический шестисерийный телевизионный художественный фильм, снятый в 1989 году режиссёром Кеном Кэмероном.",
           "year": 1989,
           "tags": [
@@ -300,7 +300,7 @@ window.__PFB_DATA = {
           "url": "https://www.imdb.com/title/tt0130827/",
           "provider": "imdb",
           "title": "Беги, Лола, беги",
-          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/0/07/Lola_rennt.jpg/480px-Lola_rennt.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/0/07/Lola_rennt.jpg/330px-Lola_rennt.jpg",
           "description": "«Беги, Лола, беги» — немецкий художественный фильм в жанре экспериментального триллера режиссёра Тома Тыквера, вышедший в 1998 году. Номинант на премию BAFTA в категории «Лучший неанглоязычный фильм» (2000).",
           "year": 1998,
           "tags": [
@@ -330,7 +330,7 @@ window.__PFB_DATA = {
           "url": "http://imdb.com/title/tt1798709",
           "provider": "imdb",
           "title": "Она (фильм, 2013)",
-          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/6/6a/Her_%28Film_2013%29.jpg/480px-Her_%28Film_2013%29.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/6/6a/Her_%28Film_2013%29.jpg/330px-Her_%28Film_2013%29.jpg",
           "description": "«Она́» — американская фантастическая мелодрама режиссёра и сценариста Спайка Джонза. В фильме снялись Хоакин Феникс, Скарлетт Йоханссон, а также Эми Адамс, Руни Мара и Оливия Уайлд.",
           "year": 0,
           "tags": [
@@ -345,7 +345,7 @@ window.__PFB_DATA = {
           "url": "http://imdb.com/title/tt0095953",
           "provider": "imdb",
           "title": "Человек дождя",
-          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/5/54/Rain_man.jpg/480px-Rain_man.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/5/54/Rain_man.jpg/330px-Rain_man.jpg",
           "description": "«Челове́к дождя́» — американский художественный фильм 1988 года, режиссёра Барри Левинсона. \nИстория страдающего савантизмом Рэймонда и его эгоцентричного брата Чарльза Бэббита заслужила в основном положительные отклики влиятельных американских критиков, получила 4 премии «Оскар» и «Золотого медведя» Берлинского кинофестиваля. Дастин Хоффман был удостоен награды Американской киноакадемии и премии «Золотой глобус» за главную мужскую роль.",
           "year": 1988,
           "tags": [
@@ -495,7 +495,7 @@ window.__PFB_DATA = {
           "url": "https://www.imdb.com/title/tt7078180/",
           "provider": "imdb",
           "title": "Sousou no Frieren",
-          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/1/16/Sousou_no_Frieren.jpg/480px-Sousou_no_Frieren.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/1/16/Sousou_no_Frieren.jpg/330px-Sousou_no_Frieren.jpg",
           "description": "Sousou no Frieren (яп. 葬送のフリーレン Со:со: но Фури:рэн, «Провожающая в последний путь Фрирен») — манга, написанная Канэхито Ямадой и проиллюстрированная Цукасой Абэ. Выпускается с апреля 2020 в японском журнале Weekly Shonen Sunday издательства Shogakukan. Основанный на манге аниме-сериал, снятый студией Madhouse, выходил с сентября 2023 по март 2024 года.",
           "year": 2020,
           "tags": [
