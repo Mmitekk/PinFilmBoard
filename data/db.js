@@ -1,6 +1,6 @@
 window.__PFB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T16:08:03.185Z",
+  "updatedAt": "2026-11-22T16:11:43.557Z",
   "boards": [
     {
       "id": "b-films",
@@ -248,21 +248,6 @@ window.__PFB_DATA = {
           ],
           "note": "",
           "addedAt": "2025-06-15T18:54:15.000Z"
-        },
-        {
-          "id": "t-pine1_AfqPShyjagRun0It48BUn_OQNVdYufERgi8ppkSl7JEzauyS_A8V",
-          "columnId": "c-want",
-          "url": "https://www.imdb.com/title/tt0096540/",
-          "provider": "imdb",
-          "title": "Бангкок Хилтон",
-          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/d/de/Bangkok_Hilton_1989.jpg/330px-Bangkok_Hilton_1989.jpg",
-          "description": "«Бангко́к Хи́лтон» — австралийский остросюжетный драматический шестисерийный телевизионный художественный фильм, снятый в 1989 году режиссёром Кеном Кэмероном.",
-          "year": 1989,
-          "tags": [
-            "pinterest"
-          ],
-          "note": "",
-          "addedAt": "2025-06-15T18:52:37.000Z"
         },
         {
           "id": "t-pine1_AfqPShyo1-yfxPKJVQI_T0nNygY2R-7_TL5GWKdO6Mudm7vJnXJK",
