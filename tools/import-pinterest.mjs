@@ -20,6 +20,9 @@ const TARGET_BOARD_NAME = 'Фильмы';
 const PAGE_SIZE = 25;
 const DELAY_MS = 400;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+// даты пинов приходят в RFC-формате («Wed, 26 Aug 2026…») — приводим к ISO,
+// иначе сортировка «Сначала новые» сравнивает строки разных форматов
+const isoDate = (d) => { const ts = Date.parse(d); return isNaN(ts) ? new Date().toISOString() : new Date(ts).toISOString(); };
 
 // ---------- js/movies.js (браузерный файл, эмулируем window) ----------
 globalThis.window = {};
@@ -275,7 +278,7 @@ for (const p of pins) {
     year,
     tags: ['pinterest'],
     note: '',
-    addedAt: p.created || new Date().toISOString(),
+      addedAt: isoDate(p.created),
   }]);
   existingIds.add(tileId);
   added++;

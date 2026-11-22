@@ -51,7 +51,10 @@
     return fetch(API + path, {
       method: opts.method || 'GET',
       headers: headers,
-      body: opts.body ? JSON.stringify(opts.body) : undefined
+      body: opts.body ? JSON.stringify(opts.body) : undefined,
+      // GET без кэша: браузер кэширует ответ GitHub API до минуты, из-за чего
+      // readRemoteFile возвращал устаревший sha и следующий PUT падал с 409
+      cache: 'no-store'
     }).then(function (r) {
       if (r.status === 401) {
         var err = new Error('Токен недействителен (401). Сгенерируйте новый.');
@@ -167,6 +170,26 @@
     });
   }
 
+  // PUT с самовосстановлением после 409: sha устарел (кэш/гонка/коммит между GET и PUT).
+  // Перечитываем файл: если на сервере уже наш контент — noop; если файл менял кто-то другой
+  // и expectedSha задан — возвращаем conflict (диалог решит); иначе повторяем с свежим sha.
+  // Для overwrite передавайте expectedSha = null — пользователь уже решил перезаписать.
+  function putWithRecovery(text, sha, message, expectedSha) {
+    return putFile(text, sha, message).catch(function (err) {
+      if (err.status !== 409) throw err;
+      return readRemoteFile().then(function (remote) {
+        if (remote && remote.text === text) return { saved: true, noop: true, sha: remote.sha };
+        if (!remote) return putFile(text, null, message + ' (повтор)');
+        if (expectedSha && remote.sha !== expectedSha) {
+          var remoteData = null;
+          try { remoteData = parseText(remote.text); } catch (e) { remoteData = null; }
+          return { conflict: { data: remoteData, sha: remote.sha } };
+        }
+        return putFile(text, remote.sha, message + ' (повтор)');
+      });
+    });
+  }
+
   /**
    * save(db, expectedSha, label)
    *  -> { saved: true, dev?: true, noop?: true, sha?, commit? }
@@ -177,22 +200,23 @@
     if (isLocalDev()) return devSave(text);
     var message = CFG.commitPrefix + ': ' + (label || 'обновление данных');
     return readRemoteFile().then(function (remote) {
-      if (!remote) return putFile(text, null, message);
+      if (!remote) return putWithRecovery(text, null, message, expectedSha);
       if (remote.text === text) return { saved: true, noop: true, sha: remote.sha };
       if (!expectedSha || remote.sha !== expectedSha) {
         var remoteData;
         try { remoteData = parseText(remote.text); } catch (e) { remoteData = null; }
         return { conflict: { data: remoteData, sha: remote.sha } };
       }
-      return putFile(text, remote.sha, message);
+      return putWithRecovery(text, remote.sha, message, expectedSha);
     });
   }
 
-  // перезапись при конфликте (по решению пользователя)
+  // перезапись при конфликте (по решению пользователя): expectedSha=null — 409 повторяется,
+  // а не снова показывает конфликт
   function overwrite(db, sha, label) {
     if (isLocalDev()) return devSave(serialize(db));
     var message = CFG.commitPrefix + ': ' + (label || 'обновление данных') + ' (перезапись удалённой версии)';
-    return putFile(serialize(db), sha, message);
+    return putWithRecovery(serialize(db), sha, message, null);
   }
 
   // загрузка свежих данных с сервера (для владельца — всегда свежее Pages)

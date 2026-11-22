@@ -398,7 +398,9 @@ main {
   padding: 18px 20px 40px;
 }
 
-.grid { columns: 200px; column-gap: 14px; }
+.grid { display: flex; gap: 14px; align-items: flex-start; }
+
+.m-col { flex: 1 1 0; min-width: 0; }
 
 .card {
   break-inside: avoid;
@@ -1126,7 +1128,7 @@ main {
 
 @media (max-width: 560px) {
   .brand-name { display: none; }
-  .grid { columns: 150px; column-gap: 10px; }
+  .grid { gap: 10px; }
   .card { margin-bottom: 10px; }
   .kb-col { width: 240px; }
 }

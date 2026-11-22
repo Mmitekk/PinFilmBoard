@@ -1,6 +1,6 @@
 window.__PFB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T15:38:56.247Z",
+  "updatedAt": "2026-11-22T15:55:58.191Z",
   "boards": [
     {
       "id": "b-films",
@@ -37,7 +37,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Wed, 13 Aug 2025 18:24:05 +0000"
+          "addedAt": "2025-08-13T18:24:05.000Z"
         },
         {
           "id": "t-pine1_AfqPShwcG4yt0SBJCTBMguu_7MQDeiPhmeqE1mfE6Idk0XFQEC_J",
@@ -52,7 +52,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Thu, 22 Oct 2026 13:43:18 +0000"
+          "addedAt": "2026-10-22T13:43:18.000Z"
         },
         {
           "id": "t-pine1_AfqPShweVbKJq60Xb1wOAwO9DqHxEUGE5e-C29p8iqvBFDkwsgup",
@@ -67,7 +67,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Wed, 07 Oct 2026 19:06:17 +0000"
+          "addedAt": "2026-10-07T19:06:17.000Z"
         },
         {
           "id": "t-pine1_AfqPShyikH5JI2nSNVRlRatgPyvLJT7sRCwPX8eLSUof8NIbnFJK",
@@ -82,7 +82,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sat, 29 Aug 2026 09:47:30 +0000"
+          "addedAt": "2026-08-29T09:47:30.000Z"
         },
         {
           "id": "t-pine1_AfqPShxnz9CL8FCP5mc7vj8HplnJyYiM-WUslB-ltLh8dsXQ83rw",
@@ -97,7 +97,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Wed, 26 Aug 2026 05:08:56 +0000"
+          "addedAt": "2026-08-26T05:08:56.000Z"
         },
         {
           "id": "t-pine1_AfqPShwnnIGNzL2c9kkySg_TeiqsoRFLXMtEyxyt1iNTEgl2YCqX",
@@ -112,7 +112,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Wed, 22 Jul 2026 17:46:15 +0000"
+          "addedAt": "2026-07-22T17:46:15.000Z"
         },
         {
           "id": "t-pine1_AfqPShx_LMo_9Etet4QgQeE1_asnXY9Op-D4H2ZlhiWfvtX8-Mnj",
@@ -127,7 +127,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 12 Apr 2026 06:25:31 +0000"
+          "addedAt": "2026-04-12T06:25:31.000Z"
         },
         {
           "id": "t-pine1_AfqPShwPxfY6pOVvKu4MmkcSpaawQ0hU_qYCNqyjMrVStI143jNM",
@@ -142,7 +142,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Fri, 23 Jan 2026 15:39:12 +0000"
+          "addedAt": "2026-01-23T15:39:12.000Z"
         },
         {
           "id": "t-pine1_AfqPShzbX703lsBbDd9kE3R2tRLuJlGNjsLJCzc2tjSIN86t38HZ",
@@ -157,7 +157,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 12 Oct 2025 14:33:42 +0000"
+          "addedAt": "2025-10-12T14:33:42.000Z"
         },
         {
           "id": "t-pine1_AfqPShw41ZrJytBiUv1Mh9VUTWukINNcQv3UWUCsu_Cb97K_1mh_",
@@ -172,7 +172,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 12 Oct 2025 13:52:06 +0000"
+          "addedAt": "2025-10-12T13:52:06.000Z"
         },
         {
           "id": "t-pine1_AfqPShza80MOrnY6_A7M-bfYWC7ewZWFdM-LHwWuFLSHXBhRXDof",
@@ -187,7 +187,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Fri, 12 Sep 2025 17:13:15 +0000"
+          "addedAt": "2025-09-12T17:13:15.000Z"
         },
         {
           "id": "t-pine1_AfqPShyKd9yCTcSsXPl9rz2NijLavttTSjvOnOe6U1FnyPUc5CqF",
@@ -202,7 +202,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sat, 23 Aug 2025 14:19:24 +0000"
+          "addedAt": "2025-08-23T14:19:24.000Z"
         },
         {
           "id": "t-pine1_AfqPShzxOZjvoxFjQYQYr_oZfCXSHMJ9kNdccyPI5UK-M9EaCKi6",
@@ -217,7 +217,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Mon, 11 Aug 2025 09:39:16 +0000"
+          "addedAt": "2025-08-11T09:39:16.000Z"
         },
         {
           "id": "t-pine1_AfqPShzsGyx7cPegF15PyKz3xFfl0XOKt3znyCO5MZ6bhIxWJUzU",
@@ -232,7 +232,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Mon, 21 Jul 2025 13:06:14 +0000"
+          "addedAt": "2025-07-21T13:06:14.000Z"
         },
         {
           "id": "t-pine1_AfqPShxFRoArRaG30FhyoYm5tGiKhXtS-NeTKPulT7S2jkzMGWIY",
@@ -247,7 +247,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sat, 19 Jul 2025 08:06:45 +0000"
+          "addedAt": "2025-07-19T08:06:45.000Z"
         },
         {
           "id": "t-pine1_AfqPShydJetSxW6JQGloUkgi3iHeU7XTAMDf7ZbD3LcVcvlunFLM",
@@ -262,7 +262,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 18:54:15 +0000"
+          "addedAt": "2025-06-15T18:54:15.000Z"
         },
         {
           "id": "t-pine1_AfqPShyjagRun0It48BUn_OQNVdYufERgi8ppkSl7JEzauyS_A8V",
@@ -277,7 +277,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 18:52:37 +0000"
+          "addedAt": "2025-06-15T18:52:37.000Z"
         },
         {
           "id": "t-pine1_AfqPShyo1-yfxPKJVQI_T0nNygY2R-7_TL5GWKdO6Mudm7vJnXJK",
@@ -292,7 +292,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 18:52:14 +0000"
+          "addedAt": "2025-06-15T18:52:14.000Z"
         },
         {
           "id": "t-pine1_AfqPShwrYGC61WE9Gmhktr70w3KumnUXOdVPRqTz1WhZYZBuHSaG",
@@ -307,7 +307,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 18:51:52 +0000"
+          "addedAt": "2025-06-15T18:51:52.000Z"
         },
         {
           "id": "t-pine1_AfqPShzDf728JzkvWRRuALTYqfTbvre1KTiGXXEo0xxyFMdS23B6",
@@ -322,7 +322,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 18:51:21 +0000"
+          "addedAt": "2025-06-15T18:51:21.000Z"
         },
         {
           "id": "t-pine1_AfqPShxqPh_KtRLAcs85VK_wrQ9cl_SuA_IUHd--JiV4SAlfiByi",
@@ -337,7 +337,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 18:49:46 +0000"
+          "addedAt": "2025-06-15T18:49:46.000Z"
         },
         {
           "id": "t-pine1_AfqPShxL9YTLeWDPOoZS7qD2TGfk6d0Badm6VF1s8PlgXtcM8hY4",
@@ -352,7 +352,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 08:27:46 +0000"
+          "addedAt": "2025-06-15T08:27:46.000Z"
         },
         {
           "id": "t-pine1_AfqPShwrWOLOyYY7AqGT8WDHvJ9D7Sc7TsWCeQpnlmWA-YWxUCg2",
@@ -367,7 +367,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 08:27:32 +0000"
+          "addedAt": "2025-06-15T08:27:32.000Z"
         },
         {
           "id": "t-pine1_AfqPShwalnBXOCMDwdgTiVxxcd2pg5DaI8LmJSBG5cPqU6cfO_tv",
@@ -382,7 +382,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 08:27:16 +0000"
+          "addedAt": "2025-06-15T08:27:16.000Z"
         },
         {
           "id": "t-pine1_AfqPShzA0wkw-AL-Zytq-s5w5UyiSIlJs26vGiLlwUcxMMxAfTk7",
@@ -397,7 +397,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 08:26:58 +0000"
+          "addedAt": "2025-06-15T08:26:58.000Z"
         },
         {
           "id": "t-pine1_AfqPShxe-UZB7kD6QXRPEKHhW1eviOrJaWjOU8upuhst-r6rYmNn",
@@ -412,7 +412,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 08:25:54 +0000"
+          "addedAt": "2025-06-15T08:25:54.000Z"
         },
         {
           "id": "t-pine1_AfqPShzF3dsMHm1px4X4oA0SV3082r6frTrqPgy0M7OJUVKUVDP6",
@@ -427,7 +427,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 08:25:14 +0000"
+          "addedAt": "2025-06-15T08:25:14.000Z"
         },
         {
           "id": "t-pine1_AfqPShxqsX9rUlCiSrtmRxmYikNoSF9-k3_jr3myF2nYeTFbeROO",
@@ -442,7 +442,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 08:25:01 +0000"
+          "addedAt": "2025-06-15T08:25:01.000Z"
         },
         {
           "id": "t-pine1_AfqPShxniasrhk3HDj1e-thOj0nooOqunn407fRgR5rzu1DbAAJt",
@@ -457,7 +457,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 08:23:03 +0000"
+          "addedAt": "2025-06-15T08:23:03.000Z"
         },
         {
           "id": "t-pine1_AfqPShw5TLHJBobGmAytGhudkpebOn-VVD3EKT_LCAqy_vaHsVNk",
@@ -472,7 +472,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 08:22:45 +0000"
+          "addedAt": "2025-06-15T08:22:45.000Z"
         },
         {
           "id": "t-pine1_AfqPShxC1SxahYFKARfpnxp37J31ypF2QrKwF30Hi7_4gLEzV-Oy",
@@ -487,7 +487,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 08:22:26 +0000"
+          "addedAt": "2025-06-15T08:22:26.000Z"
         },
         {
           "id": "t-pine1_AfqPShwJ_X6smyJpszMDFIZXJsL4tkTS1Ki-yxdqs34V1lIewBo3",
@@ -502,7 +502,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 08:22:08 +0000"
+          "addedAt": "2025-06-15T08:22:08.000Z"
         },
         {
           "id": "t-pine1_AfqPShx--XF88vfpEezG58eAQHAYEWn0Zuv5CCvrWooTYJT4PeMb",
@@ -517,7 +517,7 @@ window.__PFB_DATA = {
             "pinterest"
           ],
           "note": "",
-          "addedAt": "Sun, 15 Jun 2025 08:21:06 +0000"
+          "addedAt": "2025-06-15T08:21:06.000Z"
         },
         {
           "id": "tmws053zrimavw",
@@ -527,7 +527,7 @@ window.__PFB_DATA = {
           "provider": "wikipedia",
           "title": "Брат 2",
           "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/2/25/Brat2_poster.jpg/330px-Brat2_poster.jpg",
-          "description": "Uniform Resource Locator — адрес ресурса в сети Интернет. Стандарт URL регулируется организацией IETF. URL как формат адреса ресурса был изобретён Тимом Бернерсом-Ли в 1990 году в стенах Европейского совета по ядерным исследованиям и стал фактической основой для создания Всемирной паутины. Первое упоминание URL в документе IETF «UDI BOF» появляется в июле 1992 года, тогда же в IETF была создана рабочая группа по URL/URI, а зафиксирован стандарт URL был в декабре 1994 года в документе «Uniform Resource Locators (URL)». Сейчас URL позиционируется как часть более широкой системы адресации URI и регулируется документом, определяющим URI.",
+          "description": "«Брат 2» — российская криминальная драма производства компании «СТВ», вышедшая в 2000 году. Продолжение фильма «Брат», вышедшего тремя годами ранее. Режиссёр и автор сценария — Алексей Балабанов. В главной роли — Сергей Бодров-младший.",
           "year": 2000,
           "tags": [],
           "note": ""

@@ -210,8 +210,10 @@
     list.sort(function (a, b) {
       if (state.sort === 'title') return String(a.tile.title || '').localeCompare(String(b.tile.title || ''), 'ru');
       if (state.sort === 'year') return (b.tile.year || 0) - (a.tile.year || 0);
-      var da = a.tile.addedAt || '', db = b.tile.addedAt || '';
-      return state.sort === 'old' ? (da < db ? -1 : da > db ? 1 : 0) : (da > db ? -1 : da < db ? 1 : 0);
+      // addedAt бывают в разных форматах (ISO с сайта, RFC-даты из Pinterest) — сравниваем через Date.parse
+      var ta = Date.parse(a.tile.addedAt) || 0;
+      var tb = Date.parse(b.tile.addedAt) || 0;
+      return state.sort === 'old' ? (ta - tb) : (tb - ta);
     });
     return list;
   }
@@ -364,11 +366,26 @@
 
   // ---------- рендер: галерея ----------
 
+  // masonry читается слева направо (как Pinterest): раскладываем по колонкам round-robin.
+  // CSS columns здесь не годится — он наполняет колонку сверху вниз, и «новые» уезжали вбок/вниз.
+  var COL_GAP = 14;
+
+  function columnCount(width) {
+    var min = width <= 560 ? 150 : 200;
+    return Math.max(2, Math.floor((width + COL_GAP) / (min + COL_GAP)));
+  }
+
   function renderGallery() {
     var list = filteredTiles();
     state.renderedIds = list.map(function (e) { return e.tile.id; });
     var grid = $('#gallery');
-    grid.innerHTML = list.map(cardHTML).join('');
+    var cols = columnCount(grid.clientWidth || window.innerWidth);
+    var colHtml = [];
+    for (var i = 0; i < cols; i++) colHtml.push('');
+    list.forEach(function (e, i) {
+      colHtml[i % cols] += cardHTML(e);
+    });
+    grid.innerHTML = colHtml.map(function (c) { return '<div class="m-col">' + c + '</div>'; }).join('');
     var empty = $('#empty');
     if (state.view === 'grid' && !list.length) {
       empty.hidden = false;
@@ -1484,6 +1501,11 @@
       if (e.key === 'Enter') { e.preventDefault(); onLoginSubmit(); }
     });
     $('#logout-btn').addEventListener('click', onLogout);
+
+    // пересборка masonry при изменении ширины (кол-во колонок считается в JS)
+    window.addEventListener('resize', debounce(function () {
+      if (state.view === 'grid') renderGallery();
+    }, 200));
 
     // клавиатура
     document.addEventListener('keydown', function (e) {
