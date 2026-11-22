@@ -49,6 +49,13 @@ check('other', 'https://okko.tv/serial/the-last-of-us',
   { provider: 'other', id: null, url: 'https://okko.tv/serial/the-last-of-us' });
 check('other 2', 'https://example.org/page', { provider: 'other', id: null, url: 'https://example.org/page' });
 
+check('rutube плейлист', 'https://rutube.ru/plst/1655721/',
+  { provider: 'rutube', kind: 'plst', id: '1655721', url: 'https://rutube.ru/plst/1655721/' });
+check('fandom ru', 'https://violet-evergarden.fandom.com/ru/wiki/%D0%92%D0%B0%D0%B9iolet_%D0%AD%D0%B2%D0%B5%D1%80%D0%B3%D0%B0%D1%80%D0%B4%D0%B5%D0%BD',
+  { provider: 'fandom', id: 'Вайiolet Эвергарден', sub: 'violet-evergarden', lang: 'ru', url: 'https://violet-evergarden.fandom.com/ru/wiki/%D0%92%D0%B0%D0%B9iolet_%D0%AD%D0%B2%D0%B5%D1%80%D0%B3%D0%B0%D1%80%D0%B4%D0%B5%D0%BD' });
+check('fandom en', 'https://naruto.fandom.com/wiki/Naruto_Uzumaki?so=search',
+  { provider: 'fandom', id: 'Naruto Uzumaki', sub: 'naruto', lang: 'en', url: 'https://naruto.fandom.com/wiki/Naruto_Uzumaki?so=search' });
+
 if (M.yearFromText('фильм 1994 года') !== 1994) { failed++; console.log('FAIL yearFromText'); }
 if (M.upgradeThumb('https://thumb.wikimedia.org/wikipedia/ru/thumb/d/de/x.jpg/330px-x.jpg') !== 'https://thumb.wikimedia.org/wikipedia/ru/thumb/d/de/x.jpg/480px-x.jpg') { failed++; console.log('FAIL upgradeThumb'); }
 if (M.providerLabel('kinopoisk') !== 'Кинопоиск') { failed++; console.log('FAIL providerLabel'); }

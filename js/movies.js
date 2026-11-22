@@ -6,6 +6,8 @@
     kinopoisk: 'Кинопоиск',
     imdb: 'IMDb',
     okko: 'Okko',
+    rutube: 'Rutube',
+    fandom: 'Fandom',
     wikipedia: 'Википедия',
     other: 'Другое'
   };
@@ -78,7 +80,22 @@
     return { lang: m[1].toLowerCase(), title: safeDecode(m[2]).replace(/_/g, ' ') };
   }
 
-  // parse(url) -> { provider, id, url, lang? }
+  // плейлисты Rutube: rutube.ru/plst/<id>/
+  function parseRutubePlst(u) {
+    var m = u.match(/^https?:\/\/rutube\.ru\/plst\/(\d{3,})/i);
+    return m ? m[1] : null;
+  }
+
+  // вики Fandom: <sub>.fandom.com/<lang>/wiki/<Название> (lang может отсутствовать = en)
+  function parseFandom(u) {
+    var m = u.match(/^https?:\/\/([a-z0-9-]+)\.fandom\.com\/(?:([a-z-]{2,5})\/)?wiki\/([^?#\/]+)/i);
+    if (!m) return null;
+    var sub = m[1].toLowerCase();
+    if (sub === 'www' || sub === 'community') return null;
+    return { sub: sub, lang: m[2] ? m[2].toLowerCase() : 'en', title: safeDecode(m[3]).replace(/_/g, ' ') };
+  }
+
+  // parse(url) -> { provider, id, url, lang?, kind? }
   function parse(url) {
     var u = withScheme(url);
     if (!u) return null;
@@ -86,8 +103,11 @@
     if ((id = parseKinopoisk(u))) return { provider: 'kinopoisk', id: id, url: u };
     if ((id = parseImdb(u))) return { provider: 'imdb', id: id, url: u };
     if ((id = parseOkko(u))) return { provider: 'okko', id: id, url: u };
+    if ((id = parseRutubePlst(u))) return { provider: 'rutube', kind: 'plst', id: id, url: u };
     var wiki = parseWikipedia(u);
     if (wiki) return { provider: 'wikipedia', id: wiki.title, lang: wiki.lang, url: u };
+    var fd = parseFandom(u);
+    if (fd) return { provider: 'fandom', id: fd.title, sub: fd.sub, lang: fd.lang, url: u };
     return { provider: 'other', id: null, url: u };
   }
 
@@ -174,18 +194,34 @@
     });
   }
 
-  // «Найти в Википедии» по введённому названию
+  // «Найти в Википедии» по введённому названию.
+  // Пробуем деградирующие варианты запроса: как есть → без скобок → без латиницы
+  // («Вайiolet Эвергарден» → «Вай Эвергарден») → без кириллицы (для en-поиска).
   function enrichByTitle(title) {
     title = String(title || '').trim();
     if (!title) return Promise.resolve(null);
-    return summaryByQuery(title).then(function (s) {
-      if (!s) return null;
-      s.provider = 'wikipedia';
-      s.id = s.title;
-      s.url = 'https://ru.wikipedia.org/wiki/' + encodeURIComponent(String(s.title).replace(/ /g, '_'));
-      if (!s.year) s.year = yearFromText(s.description);
-      return s;
-    });
+    var queries = [title];
+    var noParen = title.replace(/\s*\([^)]*\)\s*/g, ' ').replace(/\s+/g, ' ').trim();
+    if (noParen && queries.indexOf(noParen) < 0) queries.push(noParen);
+    var noLatin = title.replace(/[A-Za-z]/g, '').replace(/\s+/g, ' ').trim();
+    if (noLatin.length >= 4 && queries.indexOf(noLatin) < 0) queries.push(noLatin);
+    var noCyr = title.replace(/[А-Яа-яЁё]/g, '').replace(/\s+/g, ' ').trim();
+    if (noCyr.length >= 4 && queries.indexOf(noCyr) < 0) queries.push(noCyr);
+
+    function attempt(i) {
+      if (i >= queries.length) return Promise.resolve(null);
+      return summaryByQuery(queries[i]).then(function (s) {
+        if (s) {
+          s.provider = 'wikipedia';
+          s.id = s.title;
+          s.url = 'https://ru.wikipedia.org/wiki/' + encodeURIComponent(String(s.title).replace(/ /g, '_'));
+          if (!s.year) s.year = yearFromText(s.description);
+          return s;
+        }
+        return attempt(i + 1);
+      });
+    }
+    return attempt(0);
   }
 
   // ---------- resolve(url) ----------
@@ -224,6 +260,34 @@
         });
     }
 
+    // плейлист Rutube: у страницы нет og-метатегов и API — берём <title> (в браузере
+    // fetch заблокирует CORS — тогда честный отказ) и ищем фильм в Википедии
+    function rutubePlstTitle(id) {
+      return fetch('https://rutube.ru/plst/' + id + '/', { credentials: 'omit', headers: { 'User-Agent': 'PinFilmBoard/1.0 (github.com/Mmitekk/PinFilmBoard)' } })
+        .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+        .then(function (h) {
+          var m = h.match(/<title>([^<]*)<\/title>/i);
+          if (!m) return null;
+          var t = safeDecode(m[1]);
+          t = t.split(' | ')[0];
+          t = t.replace(/\s*[–-]\s*смотреть\s+плейлист[\s\S]*$/i, '');
+          t = t.replace(/\s*-\s*все\s+серии\s*$/i, '');
+          return t.trim() || null;
+        })
+        .catch(function () { return null; });
+    }
+
+    // вики Fandom: MediaWiki api.php на том же домене (CORS с origin=*), затем Википедия
+    function fandomPageTitle(info) {
+      var base = 'https://' + info.sub + '.fandom.com/' + (info.lang !== 'en' ? info.lang + '/' : '') + 'api.php';
+      var url = base + '?action=query&titles=' + encodeURIComponent(info.id) + '&redirects=1&format=json&origin=*';
+      return fetchJSON(url, 12000).then(function (j) {
+        var pages = (j && j.query && j.query.pages) || {};
+        for (var k in pages) return pages[k].title || null;
+        return null;
+      }).catch(function () { return null; });
+    }
+
     var chain;
     if (info.provider === 'imdb') {
       chain = viaWikidata('P345');
@@ -234,11 +298,23 @@
       chain = summaryByQuery(query);
     } else if (info.provider === 'wikipedia') {
       chain = wikiSummary(info.lang || 'ru', info.id);
+    } else if (info.provider === 'rutube' && info.kind === 'plst') {
+      chain = rutubePlstTitle(info.id).then(function (title) {
+        if (!title) return null;
+        return enrichByTitle(title).then(function (s) {
+          return s || { title: title, description: '', poster: null, year: 0 };
+        });
+      });
+    } else if (info.provider === 'fandom') {
+      chain = fandomPageTitle(info).then(function (title) {
+        if (!title) return { title: info.id, description: '', poster: null, year: 0 };
+        return enrichByTitle(title).then(function (s) {
+          return s || { title: title, description: '', poster: null, year: 0 };
+        });
+      });
     } else {
-      // незнакомый сайт: пробуем последний сегмент пути как запрос
-      var seg = safeDecode(info.url.replace(/^https?:\/\/[^\/]+\//, '').split(/[?#]/)[0].split('/')[0])
-        .replace(/[-_]+/g, ' ').replace(/\.\w{2,4}$/, '').trim();
-      chain = seg ? summaryByQuery(seg) : Promise.resolve(null);
+      // незнакомый сайт: не выдумываем запросы — пользователь введёт название сам
+      chain = Promise.resolve(null);
     }
 
     return chain
