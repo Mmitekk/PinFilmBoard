@@ -1,6 +1,6 @@
 window.__PFB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T12:53:25.687Z",
+  "updatedAt": "2026-11-22T15:00:11.737Z",
   "boards": [
     {
       "id": "b-films",
@@ -61,8 +61,8 @@ window.__PFB_DATA = {
           "provider": "other",
           "title": "Пленницы",
           "poster": "https://i.pinimg.com/474x/c1/2d/c8/c12dc83918d38d43ce1e85131cefc5bc.jpg",
-          "description": "Пленницы",
-          "year": 0,
+          "description": "«Пле́нницы» — детективный триллер режиссёра Дени Вильнёва по сценарию Аарона Гузиковского. В главных ролях — Хью Джекман и Джейк Джилленхол. Премьера состоялась на кинофестивале в Теллуриде 30 августа 2013 года. В России фильм вышел в прокат 26 сентября 2013.",
+          "year": 2013,
           "tags": [
             "pinterest"
           ],
@@ -181,7 +181,7 @@ window.__PFB_DATA = {
           "provider": "okko",
           "title": "Смотрите онлайн фильм \"Феномен\" (1996) в онлайн-кинотеатре Okko!",
           "poster": "https://i.pinimg.com/474x/20/9f/a7/209fa7a3acf1d0bacfc46669c5081e83.jpg",
-          "description": "Смотрите онлайн фильм \"Феномен\" (1996) в онлайн-кинотеатре Okko!",
+          "description": "Фено́мен — термин, в общем смысле означающий явление, данное в чувственном созерцании. В естественной науке под феноменом понимается наблюдаемое явление или событие. Также фено́ме́н — необычное явление, редкий факт; то, что трудно постичь.",
           "year": 0,
           "tags": [
             "pinterest"
@@ -255,9 +255,9 @@ window.__PFB_DATA = {
           "url": "https://www.imdb.com/title/tt7222086/",
           "provider": "imdb",
           "title": "Made in Abyss (TV Series 2017– )",
-          "poster": null,
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/3/3d/Made_in_Abyss.jpg/330px-Made_in_Abyss.jpg",
           "description": "Созданный в Бездне (TV Series 2017– ) - IMDb",
-          "year": 0,
+          "year": 2012,
           "tags": [
             "pinterest"
           ],
@@ -360,8 +360,8 @@ window.__PFB_DATA = {
           "url": "http://imdb.com/title/tt0238883",
           "provider": "imdb",
           "title": "Brat 2 (2000)",
-          "poster": null,
-          "description": "",
+          "poster": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Da_Brat_Aug_2018.png",
+          "description": "Шанти Харрис, более известная как Da Brat — американская рэперша и актриса. Её дебютный альбом, Funkdafied, разошёлся миллионным тиражом, сделав её первой рэпершей-обладательницей платинового альбома.",
           "year": 0,
           "tags": [
             "pinterest"
@@ -374,10 +374,10 @@ window.__PFB_DATA = {
           "columnId": "c-want",
           "url": "http://imdb.com/title/tt0284492",
           "provider": "imdb",
-          "title": "Sisters (2001)",
-          "poster": null,
-          "description": "",
-          "year": 0,
+          "title": "Сёстры (фильм, 2001)",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/6/60/%D0%A1%D1%91%D1%81%D1%82%D1%80%D1%8B_%28%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_DVD%29.jpg/330px-%D0%A1%D1%91%D1%81%D1%82%D1%80%D1%8B_%28%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_DVD%29.jpg",
+          "description": "«Сёстры» — российский криминально-драматический боевик производства компании «СТВ». Режиссёром картины выступил Сергей Бодров-младший. Авторы сценария — Сергей Бодров-младший, Гульшад Омарова и Сергей Бодров-старший. Главные роли исполнили Оксана Акиньшина и Екатерина Горина. Слоган фильма: «Когда тебе восемь — весь мир против тебя. Когда тебе тринадцать — ты против всего мира». Премьера в России состоялась 10 мая 2001 года. Релиз на видео состоялся 19 июня.",
+          "year": 2001,
           "tags": [
             "pinterest"
           ],
@@ -404,10 +404,10 @@ window.__PFB_DATA = {
           "columnId": "c-want",
           "url": "https://www.imdb.com/title/tt0500092/",
           "provider": "imdb",
-          "title": "Serial Experiments Lain (TV Mini Series 1998)",
-          "poster": null,
-          "description": "",
-          "year": 0,
+          "title": "Эксперименты Лэйн",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/e/e1/Serial_Experiments_Lain_poster.jpeg/330px-Serial_Experiments_Lain_poster.jpeg",
+          "description": "«Эксперименты Лэйн» (яп. シリアルエクスペリメンツレイン Сириару Экусупэримэнцу Рэйн, англ. Serial Experiments Lain) — аниме-сериал режиссёра Рютаро Накамуры, выпущенный в 1998 году, рассказывающий о Сети и реальном мире, а также о девочке по имени Лэйн Ивакура, живущей в них. В аниме затрагиваются различные философские вопросы, например реальность, идентичность и общение. «Эксперименты Лэйн» также касаются объединения аналогового мира конца XX века с цифровым, человеческого существования в Интернете и «поклонения Богу через технологии».",
+          "year": 1998,
           "tags": [
             "pinterest"
           ],
@@ -419,10 +419,10 @@ window.__PFB_DATA = {
           "columnId": "c-want",
           "url": "https://www.imdb.com/title/tt2356777/",
           "provider": "imdb",
-          "title": "True Detective (TV Series 2014– )",
-          "poster": null,
-          "description": "",
-          "year": 0,
+          "title": "Настоящий детектив",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/5/5d/True_detective_logo.jpg/330px-True_detective_logo.jpg",
+          "description": "«Настоя́щий детекти́в» — американский телесериал-антология в жанре процедурной драмы, транслируемый с 12 января 2014 года на кабельном телеканале HBO. Создатель и автор сценария — Ник Пиццолатто. В каждом сезоне свой сюжет и действующие лица.",
+          "year": 2014,
           "tags": [
             "pinterest"
           ],
@@ -434,10 +434,10 @@ window.__PFB_DATA = {
           "columnId": "c-want",
           "url": "http://imdb.com/title/tt29376692",
           "provider": "imdb",
-          "title": "Bizon. Delo manekenshchitsy (TV Series 2023)",
-          "poster": null,
-          "description": "",
-          "year": 0,
+          "title": "Бизон: Дело манекенщицы",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/e/ee/%D0%91%D0%B8%D0%B7%D0%BE%D0%BD._%D0%94%D0%B5%D0%BB%D0%BE_%D0%BC%D0%B0%D0%BD%D0%B5%D0%BA%D0%B5%D0%BD%D1%89%D0%B8%D1%86%D1%8B.png/330px-%D0%91%D0%B8%D0%B7%D0%BE%D0%BD._%D0%94%D0%B5%D0%BB%D0%BE_%D0%BC%D0%B0%D0%BD%D0%B5%D0%BA%D0%B5%D0%BD%D1%89%D0%B8%D1%86%D1%8B.png",
+          "description": "«Бизон: Дело манекенщицы» — российский детективный телесериал 2023 года режиссёра Сергея Чекалова с Сергеем Безруковым в главной роли.",
+          "year": 2023,
           "tags": [
             "pinterest"
           ],
@@ -449,10 +449,10 @@ window.__PFB_DATA = {
           "columnId": "c-want",
           "url": "http://imdb.com/title/tt18292144",
           "provider": "imdb",
-          "title": "Behind Closed Doors (2022)",
-          "poster": null,
-          "description": "",
-          "year": 0,
+          "title": "Многоэтажка",
+          "poster": "https://upload.wikimedia.org/wikipedia/ru/2/2c/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D1%8D%D1%82%D0%B0%D0%B6%D0%BA%D0%B0.jpg",
+          "description": "«Многоэтажка» — российский драматический триллер режиссёра Антона Маслова, вышедший на экраны в 2022 году. В главных ролях — Денис Никифоров и Дарья Щербакова. Премьера фильма состоялась 24 февраля 2022 года.",
+          "year": 2022,
           "tags": [
             "pinterest"
           ],
@@ -509,10 +509,10 @@ window.__PFB_DATA = {
           "columnId": "c-want",
           "url": "https://www.imdb.com/title/tt0230838/",
           "provider": "imdb",
-          "title": "Sweet November (2001)",
-          "poster": null,
-          "description": "",
-          "year": 0,
+          "title": "Сладкий ноябрь (фильм, 2001)",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/1/1b/SweetNovember2.jpg/330px-SweetNovember2.jpg",
+          "description": "«Сладкий ноябрь» — американская мелодрама 2001 года с участием Киану Ривза и Шарлиз Терон.",
+          "year": 2001,
           "tags": [
             "pinterest"
           ],
@@ -524,9 +524,9 @@ window.__PFB_DATA = {
           "columnId": "c-want",
           "url": "https://www.imdb.com/title/tt10838180/",
           "provider": "imdb",
-          "title": "The Matrix Resurrections (2021)",
-          "poster": null,
-          "description": "",
+          "title": "Матрица: Воскрешение",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/7/7d/%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0_%D0%92%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5.jpg/330px-%D0%9C%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0_%D0%92%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5.jpg",
+          "description": "«Матрица: Воскрешение» — американский научно-фантастический боевик, четвёртая часть франшизы «Матрица». Продолжение фильма «Матрица: Революция» и первая лента в серии, созданная без участия основной творческой команды. Лана Вачовски, сорежиссёр и соавтор сценария трёх предыдущих фильмов вместе с сестрой Лилли, на этот раз дебютировала в качестве единоличного режиссёра, написала сценарий совместно с Дэвидом Митчеллом и Александром Хемоном, стала одним из основных продюсеров. Основные роли снова сыграли Киану Ривз, Керри-Энн Мосс, Джада Пинкетт-Смит и Ламбер Вильсон; к ним присоединились Яхья Абдул-Матин II, Джессика Хенвик, Джонатан Грофф, Нил Патрик Харрис и другие актёры.",
           "year": 0,
           "tags": [
             "pinterest"
@@ -539,10 +539,10 @@ window.__PFB_DATA = {
           "columnId": "c-want",
           "url": "https://www.imdb.com/title/tt10262648/",
           "provider": "imdb",
-          "title": "Compartment Number 6 (2021)",
+          "title": "К.Т. Келлер",
           "poster": null,
-          "description": "",
-          "year": 0,
+          "description": "Кауфман Тума Келлер, также известный как К. Т. Келлер — американский изобретатель, исполнительный директор, президент (1935—1950) и председатель правления (1950—1965) Chrysler Corporation. Известен идеей создания Детройтского Арсенала, а также участием в Манхэттенском проекте.",
+          "year": 1935,
           "tags": [
             "pinterest"
           ],
