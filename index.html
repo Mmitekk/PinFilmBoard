@@ -8,7 +8,7 @@
 <meta property="og:title" content="PinFilmBoard">
 <meta property="og:description" content="Личная доска фильмов: постеры, описания, канбан.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111'/%3E%3Crect x='6' y='9' width='20' height='14' rx='2' fill='%23fff'/%3E%3Cpath d='M14 13.5v5l4.5-2.5z' fill='%23111'/%3E%3Crect x='6' y='6' width='3' height='2.5' rx='1' fill='%23fff'/%3E%3Crect x='11' y='6' width='3' height='2.5' rx='1' fill='%23fff'/%3E%3Crect x='16' y='6' width='3' height='2.5' rx='1' fill='%23fff'/%3E%3Crect x='21' y='6' width='3' height='2.5' rx='1' fill='%23fff'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="css/style.css?v=2">
+<link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
 
@@ -56,6 +56,10 @@
       <button class="add-btn" id="add-btn" hidden>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11 5h2v6h6v2h-6v6h-2v-6H5v-2h6z"/></svg>
         Добавить фильм
+      </button>
+
+      <button class="icon-btn" id="select-btn" hidden title="Массовый выбор" aria-label="Массовый выбор">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
       </button>
 
       <button class="auth-btn" id="auth-btn">
@@ -294,6 +298,16 @@
 <!-- контекстное меню -->
 <div class="menu" id="menu" hidden></div>
 
+<!-- панель массового выбора -->
+<div class="select-bar" id="select-bar" hidden>
+  <span class="select-count" id="select-count">Выбрано: 0</span>
+  <button class="ghost-btn" id="select-clear" type="button">Снять выделение</button>
+  <button class="danger-btn" id="select-delete" type="button">Удалить выбранные</button>
+  <button class="icon-btn" id="select-exit" title="Выйти из режима выбора" aria-label="Выйти из режима выбора">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4 17.6 5 12 10.6z"/></svg>
+  </button>
+</div>
+
 <!-- тосты -->
 <div class="toasts" id="toasts"></div>
 
@@ -301,6 +315,6 @@
 <script src="data/db.js?v=1"></script>
 <script src="js/movies.js?v=1"></script>
 <script src="js/api.js?v=2"></script>
-<script src="js/app.js?v=3"></script>
+<script src="js/app.js?v=4"></script>
 </body>
 </html>

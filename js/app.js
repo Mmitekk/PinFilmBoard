@@ -144,7 +144,9 @@
     filmList: [],
     filmIdx: -1,
     resolveMeta: null,
-    wikiMeta: null
+    wikiMeta: null,
+    selectMode: false,
+    selection: []
   };
 
   var editorCtx = { tileId: null, boardId: null, columnId: null };
@@ -430,8 +432,9 @@
         '</span>';
     }
 
-    return '<article class="card" data-id="' + esc(t.id) + '" style="' + style + '">' +
+    return '<article class="card' + (state.selectMode && state.selection.indexOf(t.id) >= 0 ? ' selected' : '') + '" data-id="' + esc(t.id) + '" style="' + style + '">' +
       posterHTML +
+      '<span class="card-check">✓</span>' +
       actions +
       '<div class="card-body">' +
       '<h3 class="card-title">' + esc(t.title || 'Без названия') + '</h3>' +
@@ -545,7 +548,8 @@
     var posterHTML = t.poster
       ? '<img class="kb-card-poster" src="' + esc(t.poster) + '" alt="" loading="lazy" data-fb="">'
       : '<div class="kb-card-ph">🎬</div>';
-    return '<article class="kb-card" data-id="' + esc(t.id) + '"' + (edit ? ' draggable="true"' : '') + '>' +
+    return '<article class="kb-card' + (state.selectMode && state.selection.indexOf(t.id) >= 0 ? ' selected' : '') + '" data-id="' + esc(t.id) + '"' + (edit && !state.selectMode ? ' draggable="true"' : '') + '>' +
+      '<span class="card-check">✓</span>' +
       posterHTML +
       '<div class="kb-card-body">' +
       '<h4 class="kb-card-title">' + esc(t.title || 'Без названия') + '</h4>' +
@@ -559,6 +563,11 @@
 
   // kanban click delegation
   function onKanbanClick(e) {
+    if (state.selectMode) {
+      var selCard = e.target.closest('.kb-card');
+      if (selCard) toggleSelect(selCard.getAttribute('data-id'), selCard);
+      return; // в режиме выбора меню/кнопки/открытие отключены
+    }
     var card = e.target.closest('.kb-card');
     var cardMenuBtn = e.target.closest('[data-cardmenu]');
     var colMenuBtn = e.target.closest('[data-colmenu]');
@@ -690,7 +699,7 @@
 
   function onKanbanDragStart(e) {
     var card = e.target.closest ? e.target.closest('.kb-card') : null;
-    if (!card || !GH.canEdit()) { e.preventDefault(); return; }
+    if (!card || !GH.canEdit() || state.selectMode) { e.preventDefault(); return; }
     dnd.tileId = card.getAttribute('data-id');
     dnd.colId = null;
     dnd.index = -1;
@@ -1302,6 +1311,8 @@
     $('#auth-label').textContent = authed ? state.user : 'Войти';
     var edit = GH.canEdit();
     $('#add-btn').hidden = !edit;
+    $('#select-btn').hidden = !edit;
+    if (!edit && state.selectMode) setSelectMode(false);
   }
 
   function loadRemoteData() {
@@ -1426,6 +1437,14 @@
       renderAll();
     });
     $('#add-btn').addEventListener('click', function () { openTileModal(null, null); });
+    $('#select-btn').addEventListener('click', function () { setSelectMode(!state.selectMode); });
+    $('#select-exit').addEventListener('click', function () { setSelectMode(false); });
+    $('#select-clear').addEventListener('click', function () {
+      state.selection = [];
+      updateSelectBar();
+      renderAll();
+    });
+    $('#select-delete').addEventListener('click', deleteSelected);
     $('#auth-btn').addEventListener('click', openLoginModal);
 
     // галерея
@@ -1514,6 +1533,7 @@
         if (!$('#menu').hidden) { closeMenu(); return; }
         var open = $all('.modal').filter(function (m) { return !m.hidden; });
         if (open.length) { closeModal(open[open.length - 1]); return; }
+        if (state.selectMode) { setSelectMode(false); return; }
       }
       if (e.key === '/' && !filmOpen) {
         var tag = (e.target.tagName || '').toLowerCase();
@@ -1531,13 +1551,75 @@
   }
 
   function onGalleryClick(e) {
+    var card = e.target.closest('.card');
+    if (state.selectMode) {
+      if (card) toggleSelect(card.getAttribute('data-id'), card);
+      return;
+    }
     var actBtn = e.target.closest('[data-act]');
     if (actBtn) {
       onCardAction(actBtn.getAttribute('data-act'), actBtn.getAttribute('data-id'));
       return;
     }
-    var card = e.target.closest('.card');
     if (card) openFilm(card.getAttribute('data-id'));
+  }
+
+  // ---------- массовый выбор ----------
+
+  function setSelectMode(on) {
+    state.selectMode = !!on;
+    if (!on) state.selection = [];
+    document.body.classList.toggle('selecting', state.selectMode);
+    $('#select-btn').classList.toggle('active', state.selectMode);
+    updateSelectBar();
+    renderAll();
+  }
+
+  function toggleSelect(tileId, el) {
+    var i = state.selection.indexOf(tileId);
+    if (i >= 0) {
+      state.selection.splice(i, 1);
+      if (el) {
+        el.classList.remove('selected');
+        var ch = el.querySelector('.card-check');
+        if (ch) ch.classList.remove('on');
+      }
+    } else {
+      state.selection.push(tileId);
+      if (el) {
+        el.classList.add('selected');
+        var ch2 = el.querySelector('.card-check');
+        if (ch2) ch2.classList.add('on');
+      }
+    }
+    updateSelectBar();
+  }
+
+  function updateSelectBar() {
+    var bar = $('#select-bar');
+    bar.hidden = !state.selectMode;
+    $('#select-count').textContent = 'Выбрано: ' + state.selection.length;
+    $('#select-delete').disabled = state.selection.length === 0;
+  }
+
+  function deleteSelected() {
+    var ids = state.selection.filter(function (id) { return !!findTile(id); });
+    if (!ids.length) {
+      toast('Ничего не выбрано', 'warn');
+      return;
+    }
+    confirmDialog('Удалить ' + ids.length + ' ' + plural(ids.length, 'выбранный фильм', 'выбранных фильма', 'выбранных фильмов') + '? Одной операцией — одна сборка Pages.')
+      .then(function (choice) {
+        if (choice !== 'yes') return;
+        ids.forEach(function (id) {
+          var found = findTile(id);
+          if (found) found.board.tiles = (found.board.tiles || []).filter(function (x) { return x.id !== id; });
+        });
+        setSelectMode(false);
+        persist('массовое удаление: ' + ids.length + ' ' + plural(ids.length, 'фильм', 'фильма', 'фильмов')).then(function (ok) {
+          if (ok) renderAll();
+        });
+      });
   }
 
   function onCardAction(act, tileId) {
