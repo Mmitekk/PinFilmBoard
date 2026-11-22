@@ -1,6 +1,6 @@
 window.__PFB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T15:06:07.152Z",
+  "updatedAt": "2026-11-22T15:37:11.376Z",
   "boards": [
     {
       "id": "b-films",
@@ -113,21 +113,6 @@ window.__PFB_DATA = {
           ],
           "note": "",
           "addedAt": "Wed, 22 Jul 2026 17:46:15 +0000"
-        },
-        {
-          "id": "t-pine1_AfqPShytY7ThEcGZEbExxSrjfFDWYRMXgZKydjbgBdocD34eReLX",
-          "columnId": "c-want",
-          "url": "https://www.film.ru/movies/klara-i-solnce",
-          "provider": "other",
-          "title": "Румянова, Клара Михайловна",
-          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/5/56/%D0%9A%D0%BB%D0%B0%D1%80%D0%B0_%D0%A0%D1%83%D0%BC%D1%8F%D0%BD%D0%BE%D0%B2%D0%B0.jpg/330px-%D0%9A%D0%BB%D0%B0%D1%80%D0%B0_%D0%A0%D1%83%D0%BC%D1%8F%D0%BD%D0%BE%D0%B2%D0%B0.jpg",
-          "description": "Кла́ра Миха́йловна Румя́нова — советская и российская актриса; заслуженная артистка РСФСР (1979). Известна тем, что обладала узнаваемым характерным высоким голосом и работала в озвучивании персонажей более трёхсот советских мультфильмов.",
-          "year": 1979,
-          "tags": [
-            "pinterest"
-          ],
-          "note": "",
-          "addedAt": "Tue, 23 Jun 2026 05:16:44 +0000"
         },
         {
           "id": "t-pine1_AfqPShx_LMo_9Etet4QgQeE1_asnXY9Op-D4H2ZlhiWfvtX8-Mnj",
