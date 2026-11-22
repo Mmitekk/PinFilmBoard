@@ -1,6 +1,6 @@
 window.__PFB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T15:37:33.154Z",
+  "updatedAt": "2026-11-22T15:38:56.247Z",
   "boards": [
     {
       "id": "b-films",
@@ -518,6 +518,19 @@ window.__PFB_DATA = {
           ],
           "note": "",
           "addedAt": "Sun, 15 Jun 2025 08:21:06 +0000"
+        },
+        {
+          "id": "tmws053zrimavw",
+          "addedAt": "2026-11-22T15:38:56.247Z",
+          "columnId": "c-want",
+          "url": "https://ru.wikipedia.org/wiki/Брат_2",
+          "provider": "wikipedia",
+          "title": "Брат 2",
+          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/2/25/Brat2_poster.jpg/330px-Brat2_poster.jpg",
+          "description": "Uniform Resource Locator — адрес ресурса в сети Интернет. Стандарт URL регулируется организацией IETF. URL как формат адреса ресурса был изобретён Тимом Бернерсом-Ли в 1990 году в стенах Европейского совета по ядерным исследованиям и стал фактической основой для создания Всемирной паутины. Первое упоминание URL в документе IETF «UDI BOF» появляется в июле 1992 года, тогда же в IETF была создана рабочая группа по URL/URI, а зафиксирован стандарт URL был в декабре 1994 года в документе «Uniform Resource Locators (URL)». Сейчас URL позиционируется как часть более широкой системы адресации URI и регулируется документом, определяющим URI.",
+          "year": 2000,
+          "tags": [],
+          "note": ""
         }
       ]
     }
