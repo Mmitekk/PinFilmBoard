@@ -1,6 +1,6 @@
 window.__PFB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T15:37:11.376Z",
+  "updatedAt": "2026-11-22T15:37:33.154Z",
   "boards": [
     {
       "id": "b-films",
@@ -338,21 +338,6 @@ window.__PFB_DATA = {
           ],
           "note": "",
           "addedAt": "Sun, 15 Jun 2025 18:49:46 +0000"
-        },
-        {
-          "id": "t-pine1_AfqPShzYiWIN0sIPEQxduJ2DzyTLJxofEuMXWGL892Rvdf0bncyg",
-          "columnId": "c-want",
-          "url": "http://imdb.com/title/tt0238883",
-          "provider": "imdb",
-          "title": "Brat 2 (2000)",
-          "poster": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Da_Brat_Aug_2018.png",
-          "description": "Шанти Харрис, более известная как Da Brat — американская рэперша и актриса. Её дебютный альбом, Funkdafied, разошёлся миллионным тиражом, сделав её первой рэпершей-обладательницей платинового альбома.",
-          "year": 0,
-          "tags": [
-            "pinterest"
-          ],
-          "note": "",
-          "addedAt": "Sun, 15 Jun 2025 08:28:32 +0000"
         },
         {
           "id": "t-pine1_AfqPShxL9YTLeWDPOoZS7qD2TGfk6d0Badm6VF1s8PlgXtcM8hY4",
