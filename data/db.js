@@ -1,6 +1,6 @@
 window.__PFB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T16:13:30.169Z",
+  "updatedAt": "2026-11-22T16:31:53.979Z",
   "boards": [
     {
       "id": "b-films",
@@ -499,18 +499,6 @@ window.__PFB_DATA = {
           "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/2/25/Brat2_poster.jpg/330px-Brat2_poster.jpg",
           "description": "«Брат 2» — российская криминальная драма производства компании «СТВ», вышедшая в 2000 году. Продолжение фильма «Брат», вышедшего тремя годами ранее. Режиссёр и автор сценария — Алексей Балабанов. В главной роли — Сергей Бодров-младший.",
           "year": 2000,
-          "tags": [],
-          "note": ""
-        },
-        {
-          "id": "tmws1dk8p5ty9y",
-          "addedAt": "2026-11-22T16:13:30.169Z",
-          "columnId": "c-want",
-          "url": "https://old.yummyani.me/catalog/item/vajolet-evergarden-2026-11-21",
-          "provider": "other",
-          "title": "Kepler Input Catalog",
-          "poster": null,
-          "description": "Kepler Input Catalog (KIC) — публичная поисковая база данных о 13,2 миллионах целей Kepler Spectral Classification Program (SCP) и «Кеплер».",
           "tags": [],
           "note": ""
         }
