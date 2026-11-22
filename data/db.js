@@ -1,6 +1,6 @@
 window.__PFB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T15:55:58.191Z",
+  "updatedAt": "2026-11-22T16:13:30.169Z",
   "boards": [
     {
       "id": "b-films",
@@ -24,21 +24,6 @@ window.__PFB_DATA = {
         }
       ],
       "tiles": [
-        {
-          "id": "t-pine1_AfqPShwdGnIiKU06NVoz2LjCeqLXRs0t-VmEP0Ru9qLQzAtInq_b",
-          "columnId": "c-want",
-          "url": "https://wink.ru/series/fisher-year-2023",
-          "provider": "other",
-          "title": "Отель Элеон",
-          "poster": null,
-          "description": "«Оте́ль Элео́н» — российский комедийный телесериал, спин-офф российского ситкома «Кухня». Производством телесериала занимались компании Yellow, Black and White, Sister’s Production и Keystone Production. Телесериал повествует о комических и драматических ситуациях внутри коллектива пятизвёздочного бутик-отеля Eleon и ресторана Victor.",
-          "year": 0,
-          "tags": [
-            "pinterest"
-          ],
-          "note": "",
-          "addedAt": "2025-08-13T18:24:05.000Z"
-        },
         {
           "id": "t-pine1_AfqPShwcG4yt0SBJCTBMguu_7MQDeiPhmeqE1mfE6Idk0XFQEC_J",
           "columnId": "c-want",
@@ -263,21 +248,6 @@ window.__PFB_DATA = {
           ],
           "note": "",
           "addedAt": "2025-06-15T18:54:15.000Z"
-        },
-        {
-          "id": "t-pine1_AfqPShyjagRun0It48BUn_OQNVdYufERgi8ppkSl7JEzauyS_A8V",
-          "columnId": "c-want",
-          "url": "https://www.imdb.com/title/tt0096540/",
-          "provider": "imdb",
-          "title": "Бангкок Хилтон",
-          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/d/de/Bangkok_Hilton_1989.jpg/330px-Bangkok_Hilton_1989.jpg",
-          "description": "«Бангко́к Хи́лтон» — австралийский остросюжетный драматический шестисерийный телевизионный художественный фильм, снятый в 1989 году режиссёром Кеном Кэмероном.",
-          "year": 1989,
-          "tags": [
-            "pinterest"
-          ],
-          "note": "",
-          "addedAt": "2025-06-15T18:52:37.000Z"
         },
         {
           "id": "t-pine1_AfqPShyo1-yfxPKJVQI_T0nNygY2R-7_TL5GWKdO6Mudm7vJnXJK",
@@ -529,6 +499,18 @@ window.__PFB_DATA = {
           "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/2/25/Brat2_poster.jpg/330px-Brat2_poster.jpg",
           "description": "«Брат 2» — российская криминальная драма производства компании «СТВ», вышедшая в 2000 году. Продолжение фильма «Брат», вышедшего тремя годами ранее. Режиссёр и автор сценария — Алексей Балабанов. В главной роли — Сергей Бодров-младший.",
           "year": 2000,
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmws1dk8p5ty9y",
+          "addedAt": "2026-11-22T16:13:30.169Z",
+          "columnId": "c-want",
+          "url": "https://old.yummyani.me/catalog/item/vajolet-evergarden-2026-11-21",
+          "provider": "other",
+          "title": "Kepler Input Catalog",
+          "poster": null,
+          "description": "Kepler Input Catalog (KIC) — публичная поисковая база данных о 13,2 миллионах целей Kepler Spectral Classification Program (SCP) и «Кеплер».",
           "tags": [],
           "note": ""
         }
