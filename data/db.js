@@ -1,6 +1,6 @@
 window.__PFB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T16:33:25.103Z",
+  "updatedAt": "2026-11-23T05:51:03.293Z",
   "boards": [
     {
       "id": "b-films",
@@ -248,21 +248,6 @@ window.__PFB_DATA = {
           ],
           "note": "",
           "addedAt": "2025-06-15T18:54:15.000Z"
-        },
-        {
-          "id": "t-pine1_AfqPShyo1-yfxPKJVQI_T0nNygY2R-7_TL5GWKdO6Mudm7vJnXJK",
-          "columnId": "c-want",
-          "url": "https://www.imdb.com/title/tt0130827/",
-          "provider": "imdb",
-          "title": "Беги, Лола, беги",
-          "poster": "https://thumb.wikimedia.org/wikipedia/ru/thumb/0/07/Lola_rennt.jpg/330px-Lola_rennt.jpg",
-          "description": "«Беги, Лола, беги» — немецкий художественный фильм в жанре экспериментального триллера режиссёра Тома Тыквера, вышедший в 1998 году. Номинант на премию BAFTA в категории «Лучший неанглоязычный фильм» (2000).",
-          "year": 1998,
-          "tags": [
-            "pinterest"
-          ],
-          "note": "",
-          "addedAt": "2025-06-15T18:52:14.000Z"
         },
         {
           "id": "t-pine1_AfqPShwrYGC61WE9Gmhktr70w3KumnUXOdVPRqTz1WhZYZBuHSaG",
